@@ -1,5 +1,6 @@
 import { requireRole } from "@/lib/auth/requireRole";
 import LogoutButton from "@/components/LogoutButton";
+import Link from "next/link";
 
 export default async function TeacherDashboard() {
   await requireRole(["teacher"]);
@@ -13,7 +14,9 @@ export default async function TeacherDashboard() {
           Welcome to the SVN ERP Teacher Dashboard
         </p>
 
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link href="/teacher/attendance" className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">Take attendance</Link>
+          <Link href="/teacher/examinations" className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700">Examinations</Link>
           <LogoutButton />
         </div>
       </div>

@@ -22,6 +22,30 @@ export default async function AdminDashboard() {
 
         <section className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Link
+            href="/admin/examinations"
+            className="rounded-2xl border border-indigo-100 bg-white p-6 shadow-sm transition hover:border-indigo-300 hover:shadow-md"
+          >
+            <h2 className="text-lg font-semibold text-gray-900">Examinations</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Schedule exams, configure subjects, and review results.
+            </p>
+            <span className="mt-5 inline-block text-sm font-medium text-indigo-600">
+              Manage examinations →
+            </span>
+          </Link>
+          <Link
+            href="/admin/attendance"
+            className="rounded-2xl border border-indigo-100 bg-white p-6 shadow-sm transition hover:border-indigo-300 hover:shadow-md"
+          >
+            <h2 className="text-lg font-semibold text-gray-900">Attendance</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Take the daily register and review class attendance.
+            </p>
+            <span className="mt-5 inline-block text-sm font-medium text-indigo-600">
+              Open attendance →
+            </span>
+          </Link>
+          <Link
             href="/admin/students/new"
             className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md"
           >
